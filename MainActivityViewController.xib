@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainActivityViewController" customModule="SlideNavDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;It's so appealing.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7w-Ki-hzd">
+                    <rect key="frame" x="8" y="200" width="584" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="1l4-y0-pFf"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="QQA-2H-ZSj"/>
+                        <constraint firstAttribute="width" constant="584" id="wqs-TO-B4V"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="QQA-2H-ZSj"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View #1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bJ-Ub-qQ0">
+                    <rect key="frame" x="165" y="100" width="270" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="FFR-KO-oQm"/>
+                        <constraint firstAttribute="height" constant="60" id="UNf-TA-X7r"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4bJ-Ub-qQ0" secondAttribute="trailing" id="2dV-7P-mSw"/>
+                <constraint firstItem="4bJ-Ub-qQ0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6A9-DY-VWB"/>
+                <constraint firstItem="k7w-Ki-hzd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="EoY-V5-0nR"/>
+                <constraint firstItem="4bJ-Ub-qQ0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="FTV-Rw-t6y"/>
+                <constraint firstAttribute="trailing" secondItem="k7w-Ki-hzd" secondAttribute="trailing" constant="8" id="duZ-i7-ru1"/>
+                <constraint firstItem="k7w-Ki-hzd" firstAttribute="top" secondItem="4bJ-Ub-qQ0" secondAttribute="bottom" constant="40" id="jyE-x3-D3w"/>
+                <constraint firstAttribute="centerX" secondItem="k7w-Ki-hzd" secondAttribute="centerX" id="pqs-OY-yfb"/>
+                <constraint firstAttribute="centerX" secondItem="4bJ-Ub-qQ0" secondAttribute="centerX" id="v0B-gM-d2I"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="2dV-7P-mSw"/>
+                    <exclude reference="6A9-DY-VWB"/>
+                    <exclude reference="EoY-V5-0nR"/>
+                    <exclude reference="duZ-i7-ru1"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
