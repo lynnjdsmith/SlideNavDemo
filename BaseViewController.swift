@@ -20,28 +20,24 @@ class BaseViewController: UIViewController {
   var menuWidth = 160
   var statusHeight = 20
   
-  var mainActivityVC :MainActivityViewController
-  var TwoVC :TwoViewController
-  var ThreeVC :ThreeViewController
-  var FourVC :FourViewController
+  var mainActivityVC  :MainActivityViewController
+  var TwoVC           :TwoViewController
+  var ThreeVC         :ThreeViewController
+  var FourVC          :FourViewController
 
   required init(coder aDecoder: NSCoder) {
     
-    var mainActivityVC = MainActivityViewController(nibName: "MainActivityViewController", bundle: nil)
+    mainActivityVC = MainActivityViewController(nibName: "MainActivityViewController", bundle: nil)
     mainActivityVC.view.frame = CGRectMake(0, topMenuHeight, screenSize.width, screenSize.height - topMenuHeight)
-    self.mainActivityVC = mainActivityVC
     
-    var TwoVC = TwoViewController(nibName: "TwoViewController", bundle: nil)
+    TwoVC = TwoViewController(nibName: "TwoViewController", bundle: nil)
     TwoVC.view.frame = CGRectMake(0, topMenuHeight, screenSize.width, screenSize.height - topMenuHeight)
-    self.TwoVC = TwoVC
 
-    var ThreeVC = ThreeViewController(nibName: "ThreeViewController", bundle: nil)
+    ThreeVC = ThreeViewController(nibName: "ThreeViewController", bundle: nil)
     ThreeVC.view.frame = CGRectMake(0, topMenuHeight, screenSize.width, screenSize.height - topMenuHeight)
-    self.ThreeVC = ThreeVC
     
-    var FourVC = FourViewController(nibName: "FourViewController", bundle: nil)
+    FourVC = FourViewController(nibName: "FourViewController", bundle: nil)
     FourVC.view.frame = CGRectMake(0, topMenuHeight, screenSize.width, screenSize.height - topMenuHeight)
-    self.FourVC = FourVC
     
     super.init(coder: aDecoder)
   }
@@ -64,7 +60,6 @@ class BaseViewController: UIViewController {
     } else {        // open
       animateCenterPanelXPosition(targetPosition: 150)
       menuOpen = true
-      
     }
   }
 
