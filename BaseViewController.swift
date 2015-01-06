@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BaseViewController.swift
 //  SlideNavDemo
 //
 //  Created by Lynn Smith on 12/10/14.
@@ -54,13 +54,6 @@ class BaseViewController: UIViewController {
     self.view.addSubview(ThreeVC.view)
     self.view.addSubview(FourVC.view)
     self.view.addSubview(mainActivityVC.view)
-    
-    //self.view.bringSubviewToFront(FourVC.view)
-    
-    // hide everything but main
-    //TwoVC.view.hidden = true
-    //ThreeVC.view.hidden = true
-    //FourVC.view.hidden = true
   }
 
   
@@ -76,41 +69,25 @@ class BaseViewController: UIViewController {
   }
 
   @IBAction func menuBtn1(sender: AnyObject) {
-    //self.hideVCs()
-    //mainActivityVC.view.hidden = false
     self.view.bringSubviewToFront(mainActivityVC.view)
     self.menuButtonToggle(self)
   }
   
   @IBAction func TwoButtonPressed(sender: AnyObject) {
-    //self.hideVCs()
-    //TwoVC.view.hidden = false
     self.view.bringSubviewToFront(TwoVC.view)
     self.menuButtonToggle(self)
   }
 
   @IBAction func ThreeButtonPressed(sender: AnyObject) {
-    //self.hideVCs()
-    //ThreeVC.view.hidden = false
     self.view.bringSubviewToFront(ThreeVC.view)
     self.menuButtonToggle(self)
   }
   
   @IBAction func FourButtonPressed(sender: AnyObject) {
-    //self.hideVCs()
-    //FourVC.view.hidden = false
     self.view.bringSubviewToFront(FourVC.view)
     self.menuButtonToggle(self)
   }
-  
-  // Another technique is to show/hide instead of fronting. (BringToFront-ing, that is.)
-  /* func hideVCs() {
-    mainActivityVC.view.hidden = true
-    TwoVC.view.hidden = true
-    ThreeVC.view.hidden = true
-    FourVC.view.hidden = true
-  } */
-  
+
   func animateCenterPanelXPosition(#targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
     UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
       self.mainActivityVC.view.frame.origin.x = targetPosition
